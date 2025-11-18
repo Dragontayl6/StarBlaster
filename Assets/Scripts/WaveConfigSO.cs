@@ -1,12 +1,12 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "WaveConfig", menuName = "New WaveConfig")]
-public class NewScriptableObjectScripWaveConfigSO : ScriptableObject
+public class WaveConfigSO : ScriptableObject
 {
     [SerializeField] Transform pathPrefab;
     [SerializeField] float enemyMoveSpeed = 5f;
 
-    public Transform GetStatingWaypoint()
+    public Transform GetStartingWaypoint()
     {
         return pathPrefab.GetChild(0);
     }

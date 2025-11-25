@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 2554867860327680642}
   - component: {fileID: 3254754621665616686}
   - component: {fileID: 5694421424688283173}
+  - component: {fileID: -6400845110050943669}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -200,6 +201,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefada3e1cf1bab4897e1ec75952a566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  healthPoints: 50
+  isPlayer: 1
+  scoreValue: 50
+  health: 300
   hitParticles: {fileID: 5035141518585813868, guid: e169c020211deb148a72ca0f7c91d2b0, type: 3}
   applyCameraShake: 1
+--- !u!114 &-6400845110050943669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223665690489420092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716c68d70d051bc4395d6f518412e3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
+  damage: 10

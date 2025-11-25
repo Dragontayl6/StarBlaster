@@ -20,7 +20,7 @@ public class Shooter : MonoBehaviour
 
     void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
+        audioManager = FindFirstObjectByType<AudioManager>();
 
         if (useAI)
         {

@@ -177,7 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefada3e1cf1bab4897e1ec75952a566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  healthPoints: 50
+  isPlayer: 0
+  scoreValue: 50
+  health: 49
   hitParticles: {fileID: 5035141518585813868, guid: e169c020211deb148a72ca0f7c91d2b0, type: 3}
   applyCameraShake: 0
 --- !u!114 &-7766272129361430838

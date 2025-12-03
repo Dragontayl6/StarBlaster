@@ -72,11 +72,11 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
+    compressionQuality: 72
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -142,12 +142,12 @@ TextureImporter:
       name: Purple ship without background_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 174
-        width: 1938
-        height: 1777
+        x: 57
+        y: 175
+        width: 1932
+        height: 1767
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 407dbd5389281ca46937180d80af8f6c
     internalID: 0
     vertices: []
     indices: 

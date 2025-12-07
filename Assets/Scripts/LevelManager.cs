@@ -1,8 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Reflection;
-using NUnit.Framework;
-using UnityEngine.TestTools;
 using System.Collections;
 
 public class LevelManager : MonoBehaviour
@@ -10,6 +7,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] float sceneLoadDelay = 2f;
 
     ScoreKeeper scoreKeeper;
+    bool level2Loaded = false;
 
     void Awake()
     {
@@ -18,7 +16,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Level1");
         scoreKeeper.ResetScore();
     }
 
@@ -30,6 +28,23 @@ public class LevelManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    void Update()
+    {
+        if (level2Loaded) return;
+        if (scoreKeeper == null) return;
+
+        if (scoreKeeper.GetScore() >= 250)
+        {
+            level2Loaded = true;
+            SceneManager.LoadScene("Level2");
+        }
     }
 
     public void QuitGame()

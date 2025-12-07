@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     {   
         cameraShake = Camera.main.GetComponent<CameraShake>();   
         audioManager = FindFirstObjectByType<AudioManager>();
-        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
         levelManager = FindFirstObjectByType<LevelManager>();
     }
 
@@ -50,7 +50,7 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        if (!isPlayer)
+        if (isPlayer)
         {
             levelManager.LoadGameOver();
         }

@@ -13,8 +13,6 @@ public class ScoreKeeper : MonoBehaviour
 
     void ManageSingleton()
     {
-        //int instanceCount = FindObjectsByType<AudioManager>(FindObjectsSortMode.None).Length;
-        //if (instanceCount > 1)
         if (instance != null)
         {
             gameObject.SetActive(false);

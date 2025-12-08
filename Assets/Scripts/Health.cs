@@ -3,6 +3,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] bool isPlayer;
+    [SerializeField] bool isBoss;
     [SerializeField] int scoreValue = 50;
     [SerializeField] int health = 50;
     [SerializeField] ParticleSystem hitParticles;
@@ -56,7 +57,21 @@ public class Health : MonoBehaviour
         }
         else
         {
-            scoreKeeper.ModifyScore(scoreValue);
+            if (isBoss)
+            {
+                // When the boss dies, immediately load the GameOver scene.
+                Debug.Log("Boss died: loading GameOver scene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+                // Also notify LevelManager if available (keeps existing behavior compatible)
+                if (levelManager != null)
+                {
+                    levelManager.LoadGameOver();
+                }
+            }
+            else
+            {
+                scoreKeeper.ModifyScore(scoreValue);
+            }
         }
         Destroy(gameObject);
     }

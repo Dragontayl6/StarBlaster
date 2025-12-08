@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
@@ -35,10 +36,14 @@ public class ScoreKeeper : MonoBehaviour
         score += scoreToAdd;
         score = Mathf.Clamp(score, 0, int.MaxValue);
         print(score);   
+        OnScoreChanged?.Invoke(score);
     }
 
     public void ResetScore()
     {
         score = 0;
+        OnScoreChanged?.Invoke(score);
     }
+
+    public event Action<int> OnScoreChanged;
 }
